@@ -14,6 +14,7 @@ if current_os == "windows":
     # for number of attempts for windows, use -n NOT -c
 else:
     # Build the ping command for any other OS
+    # other OSs unix-based so we use the same ping command
     ping_cmd = f"ping -c 1 -w 2 {ip} > /dev/null 2>&1"
     # Execute the command and capture exit code.
     # It will give out a number, 0 for success, 
