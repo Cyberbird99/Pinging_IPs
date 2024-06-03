@@ -19,8 +19,8 @@ ping_cmd = f"ping -c 1 -w 2 {ip} > /dev/null 2>&1"
 # Execute command and capture exit code
 exit_code = os.system(ping_cmd)
 # It'll give out a number.
-# It's a success/failure status. 0 means success, 
-# any other number failure
+# It will yield a number: 0 denotes success, 
+# while any other number signifies failure.
 
 # Print the results to console
 print(exit_code)
