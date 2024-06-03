@@ -26,9 +26,9 @@ for final_octet in range(254):
     # print results to console
     if exit_code == 0:
         
-        print("{0} is online".format(ip))
+        print("{0} is up".format(ip))
     else:
-        print("{0} is NOT online".format(ip))
+        print("{0} is down".format(ip))
 
     # else part of the condition could preferably be omitted.
     # so only online Ips appear on console.
