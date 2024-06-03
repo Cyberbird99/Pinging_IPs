@@ -13,11 +13,12 @@ if current_os == "windows":
     ping_cmd = f"ping -n 1 -w 2 {ip} > null"
     # for number of attempts for windows, use -n NOT -c
 else:
-    # Build the ping command for any other OS
-    # other OSs unix-based so we use the same ping command
+    # Build the ping command for any different OS
+    # As other operating systems are Unix-based, we utilize the same ping command.
     ping_cmd = f"ping -c 1 -w 2 {ip} > /dev/null 2>&1"
-    # Execute the command and capture exit code.
-    # It will give out a number, 0 for success, 
-    # other number for failure
+    
+    # Execute the command and capture the exit code. 
+    # It will yield a number: 0 denotes success, 
+    # while any other number signifies failure.
     exit_code = os.system(ping_cmd)
 
